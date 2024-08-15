@@ -1,0 +1,177 @@
+/* Styling for the Header */
+#main-logo {
+    width: 210px;
+}
+
+#HeaderContent {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    padding: 10px 20px; /* Padding around the header */
+    background-color: #f5f5f5; /* Light background color for the header */
+}
+
+/* Styling the navbar */
+.navbar {
+    background-color: #ffeb3bbf; /* Light yellow background color for the navbar */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around the navbar */
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex; 
+    justify-content: space-around; 
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+/* Styling the BodyContent */
+#BodyContent {
+    padding: 20px; /* Add padding around the content */
+    background-color: #ffeb3bbf; /* Light yellow background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the content */
+}
+
+/* Styling the Search Bar */
+#SearchBar {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center content */
+    gap: 10px; /* Space between input and button */
+    width: 30%; /* Full width */
+    margin: 0 20% 0 20%;
+}
+
+/* Styling the input */
+#searchedReciepe {
+    flex: 1; /* Take up available space */
+    padding: 10px; /* Add padding inside the input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling the button */
+#searchFood,#test{
+    background-color: #4caf50; /* Light green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+#searchFood:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Styling for the container holding all cards */
+/* Styling for the container holding all cards */
+#AllCards {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    
+}
+
+/* Styling for each card */
+.recep {
+    background-color: #fff; /* White background for the card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 15px; 
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    width: 80%; /* Ensure card takes full column width */
+}
+
+
+/* SkeletonLoader.css */
+
+.skeleton-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-header {
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.skeleton-content {
+    display: flex;
+    align-items: center;
+}
+
+.skeleton-thumbnail {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.skeleton-text {
+    flex: 1;
+}
+
+.skeleton-line {
+    height: 16px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+.skeleton-line.long {
+    width: 100%;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
