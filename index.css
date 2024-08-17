@@ -175,3 +175,15 @@
         background-position: 100% 0%;
     }
 }
+
+#AboutUs{
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
+}
+.ant-list-header{
+    font-size:30px
+}
+.ant-list-item{
+    font-size:15px
+}

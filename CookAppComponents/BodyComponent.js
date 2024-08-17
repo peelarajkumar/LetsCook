@@ -1,6 +1,7 @@
 import { useState , useEffect } from "react";
 import CookApiURL from "../CookAPIs/CookingAPI"
 import SkeletonLoader from "./SkimmerComponent";
+import { Card } from "antd";
 
 const BodyComp = ()=>{
     console.log('body')
@@ -37,21 +38,29 @@ const ReciepeCard = (props)=>{
 
     let Ingredients = Object.keys(props.props).filter(item=>item.includes('strIngredient'));
     let measurements = Object.keys(props.props).filter(item=>item.includes('strMeasure'));
-    let recepcontent = (<div className="recep">
+    
+    let recepcontent = (<div className="CardsMultiple">
+       <Card 
+       title={props.props.strMeal} 
+       extra={<a href="#">More</a>}
+      style={{
+        width: 800,
+      }}>
+        <div className="CardContent">
         <img height="250px" width="350px" src={props.props.strMealThumb}></img>
-        <h4>The Reciepe Name : {props.props.strMeal}</h4>
-        <h4>The Origin Country : {props.props.strArea}</h4>
-        <h4>Reciepe Type  : {props.props.strCategory}</h4>
-        <h4>Ingredients And Their measurements</h4>
+        <h3>The Reciepe Name : {props.props.strMeal}</h3>
+        <h3>The Origin Country : {props.props.strArea}</h3>
+        <h3>Reciepe Type  : {props.props.strCategory}</h3>
+        <h3>Ingredients And Their measurements</h3>
         {Ingredients.map((item,index)=>{
             if(index<6){
-                return (<h5 key={index}>{props.props[item]} : {props.props[measurements[index]]} </h5>)
+                return (<h3 key={index}>{props.props[item]} : {props.props[measurements[index]]} </h3>)
             }
             else return ""
            
-        })}
+        })}</div>
         <h4> {props.props.strInstructions}</h4>
-
+        </Card>
     </div>)
     return recepcontent
 }
